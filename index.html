@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MegaMart</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
+
+    <link rel="shortcut icon" href="./media/MegaMart_title.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @keyframes bg_change {
+            0%, 20% {
+                background-image: url('./media/SMART_WEARABLE.png');
+            }
+            21%, 40% {
+                background-image: url('./media//SUMMER_SALE.png');
+            }
+            41%, 60% {
+                background-image: url('./media/fight.png');
+            }
+            61%, 80% {
+                background-image: url('./media/mobile.png');
+            }
+            81%, 100% {
+                background-image: url('./media/shoes.png');
+            }
+        }
+
+        .bg_change {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            animation: bg_change 25s infinite ease-in-out;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Sections -->
+    <div class="w-full">
+        <!-- welcome section -->
+        <div class="w-full flex items-center justify-between md:flex-row flex-col bg-gray-400 px-10 py-4">
+            <p class="md:text-base text-xs text-white">Welcome to <span class="text-blue-600 font-bold">MegaMart</span> where you can shop anything.</p>
+
+            <div class="flex items-center justify-between bg-white rounded px-5 py-2 text-gray-400 md:mt-0 mt-3 ">
+                <i class="fa-solid fa-location-dot text-blue-400"></i>
+                <p class="text-xs ms-2 cursor-pointer hover:text-black">Deliver to <b>606060</b></p>
+                <div class="h-4 ms-2 border"></div>
+                <i class="fa-solid fa-truck text-blue-400 ms-2"></i>
+                <p class="text-xs ms-2 cursor-pointer hover:text-black">Track your order</p>
+                <div class="h-4 ms-2 border"></div>
+                <i class="fa-solid fa-percent ms-2 text-blue-400"></i>
+                <p class="text-xs ms-2 cursor-pointer hover:text-black">All Offers</p>
+            </div>
+        </div>
+
+        <!-- Nav bar -->
+        <nav class="w-full flex items-center justify-between bg-linear-to-r from-blue-700 to-sky-700 px-10 md:py-4 py-8 sticky top-0 z-1 border-b-3 border-fuchsia-400">
+            <!-- nav items -->
+            <ul class="list-none w-full flex justify-between items-center md:flex-row flex-col">
+                <li class=""><img src="./media/content-logo.png" alt="no-image" style="height: 80px; width: 100%;"></li>
+                <!-- search bar -->
+                <li class="md:mt-0 mt-5">
+                    <div class="flex items-center justify-between px-8 py-1 rounded-full bg-gray-200 shadow-sm border border-gray-200 border-3 focus-within:border-orange-400">
+                        <i class="fa-solid fa-magnifying-glass fa-2x text-blue-400 cursor-pointer"></i>
+                        <input type="text" class="flex-grow px-3 py-2 bg-transparent outline-none" placeholder="search items here">
+                    </div>
+                </li>
+                <!-- home -->
+                <li class="md:mt-0 mt-5 text-white md:text-xl cursor-pointer hover:text-lime-400 font-semibold"><a href="#">Home</a></li>
+                <!-- about -->
+                <li class="md:mt-0 mt-5 text-white md:text-xl cursor-pointer hover:text-lime-400 font-semibold"><a href="#aboutSS">About Us</a></li>
+                <!-- Cart -->
+                <li class="md:mt-0 mt-5 text-white md:text-xl hover:text-lime-400 cursor-pointer font-bold">
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-cart-shopping fa-2x"></i>
+                        <p><sub>Cart</sub></p>
+                    </div>
+                </li>
+                <!-- Return -->
+                <li class="md:mt-0 mt-5 text-white cursor-pointer font-semibold">
+                    <div class="flex flex-col text-base/4 text-white hover:text-lime-400">
+                        <p>Returns</p>
+                        <p><b>&Orders</b></p>
+                    </div>
+                </li>
+                <!-- drop down -->
+                <li class="md:mt-0 mt-5 text-white cursor-pointer">
+                    <form action="#">
+                        <select name="" id="" class="bg-transparent outline-none px-2 py-2 text-white font-semibold hover:text-lime-400 text-lg cursor-pointer">
+                            <option value="" class="text-black">My Profile</option>
+                            <option value="Account Settings" class="text-black">Account</option>
+                            <option value="Account Settings" class="text-black">Settings</option>
+                            <option value="Support" class="text-black">Support</option>
+                            <option value="License" class="text-black">License</option>
+                            <option value="Sign out" class="text-black">Sign out</option>
+                        </select>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="w-full">
+            <div class="w-80 h-64 bg_change py-36"></div>
+        </div>
+
+        <!-- Items 60% off -->
+        <div class="w-full bg-gray-200 md:pt-5">
+            <!-- heading -->
+            <div>
+                <h1 class="md:text-3xl text-2xl md:pt-5 pt-10 font-bold md:ps-10 ps-5">UP TO <span class="text-blue-600 animate-pulse">60%</span> off</h1>
+            </div>
+            <!-- contents -->
+            <div class="md:grid grid-cols-4 gap-10 w-full md:p-10 pb-8 px-4">
+                <!-- 1st box -->
+                <div class="bg-white px-4 py-5 md:mt-0 mt-5">
+                    <h1 class="text-center text-xl font-semibold">Home Appliances</h1>
+                    <div class="grid grid-cols-2 gap-2 mt-2">
+                        <div class="cursor-pointer">
+                            <img src="./media/ac.jpg" alt="no-image" >
+                            <p class="">Air Conditioners</p>
+                        </div>
+                        
+                        <div class="cursor-pointer">
+                            <img src="https://cdn.thewirecutter.com/wp-content/media/2024/12/BVEST-32-INCH-TVS-2048px-2870-3x2-1.jpg?auto=webp&quality=75&crop=3:2&width=1024" alt="no-image">
+                            <p>Televisions</p>
+                        </div>
+    
+                        <div class="cursor-pointer">
+                            <img src="https://cms-assets.bajajfinserv.in/is/image/bajajfinance/smart-fan?scl=1&fmt=png-alpha" alt="no-image">
+                            <p>Smart Fans</p>
+                        </div>
+    
+                        <div class="cursor-pointer">
+                            <img src="./media/fridge.png" alt="no-image">
+                            <p>Refrigerators</p>
+                        </div>
+                    </div>
+                    <p class="mt-10 text-blue-700 hover:text-blue-900"><a href="#">See more</a></p>
+                </div>
+                <!-- 2nd box -->
+                <div class="bg-white px-4 py-5 md:mt-0 mt-5">
+                    <h1 class="text-center text-xl font-semibold">Design Your Home</h1>
+                    <div class="grid grid-cols-2 gap-2 mt-2">
+                        <div class="cursor-pointer">
+                            <img src="./media/lights.png" alt="no-image" >
+                            <p class="">Lighting Solutions</p>
+                        </div>
+                        
+                        <div class="cursor-pointer">
+                            <img src="./media/curtains.png" alt="no-image">
+                            <p>Curtains</p>
+                        </div>
+    
+                        <div class="cursor-pointer">
+                            <img src="./media/wallpapers.png" alt="no-image">
+                            <p>Wallpapers</p>
+                        </div>
+    
+                        <div class="cursor-pointer">
+                            <img src="./media/sb.png" alt="no-image">
+                            <p>Switchboards</p>
+                        </div>
+                    </div>
+                    <p class="mt-10 text-blue-700 hover:text-blue-900"><a href="#">See more</a></p>
+                </div>
+                <!-- 3rd box -->
+                <div class="bg-white px-4 py-5 md:mt-0 mt-5">
+                    <h1 class="text-center text-xl font-semibold">Furnitures</h1>
+                    <div class="grid grid-cols-2 gap-2 mt-2">
+                        
+                        <div class="cursor-pointer">
+                            <img src="https://www.irafurniture.com/cdn/shop/files/size_reduced_300x300.jpg?v=1678168567" alt="no-image">
+                            <p>Sofas</p>
+                        </div>
+    
+                        <div class="cursor-pointer">
+                            <img src="./media/Wooden_Beds.png" alt="no-image">
+                            <p>Wooden Beds</p>
+                        </div>
+    
+                        <div class="cursor-pointer">
+                            <img src="./media/Dining_table.png" alt="no-image">
+                            <p>Dining Tables</p>
+                        </div>
+
+                        <div class="cursor-pointer">
+                            <img src="./media/Tables.png" alt="no-image" >
+                            <p class="">Tables</p>
+                        </div>
+                    </div>
+                    <p class="mt-10 text-blue-700 hover:text-blue-900"><a href="#">See more</a></p>
+                </div>
+                <!-- 4th box -->
+                <div class="bg-white px-4 py-5 md:mt-0 mt-5">
+                    <h1 class="text-center text-xl font-semibold">Other Essentials</h1>
+                    <div class="grid grid-cols-2 gap-2 mt-2">
+                        <div class="cursor-pointer">
+                            <img src="./media/Vacum_Cleaner.png" alt="no-image" >
+                            <p class="">Vacuum Cleaner</p>
+                        </div>
+                        
+                        <div class="cursor-pointer">
+                            <img src="./media/Kitche_essentials.png" alt="no-image">
+                            <p>Kitchen Essentials</p>
+                        </div>
+
+                        <div class="cursor-pointer">
+                            <img src="./media/automobile_essentials.png" alt="no-image">
+                            <p>Automobile Items</p>
+                        </div>
+    
+                        <div class="cursor-pointer">
+                            <img src="./media/modern jewellery.png" alt="no-image">
+                            <p>Modern Jewellery</p>
+                        </div>
+    
+                    </div>
+                    <p class="mt-10 text-blue-700 hover:text-blue-900"><a href="#">Explore more</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shop Section -->
+        <div class="w-full bg-cyan-100 md:pt-5 py-10">
+            <!-- Grab the best deals on Smartphones -->
+            <div>
+                <!-- heading -->
+                <div class="pb-10 md:px-10 px-6">
+                    <div class="flex items-center justify-between">
+                        <h1 class="font-bold md:text-3xl text-xl md:pt-5  pb-3">Grab the best deals on <span class="text-indigo-500">Smartphones</span></h1>
+                        <div class="flex gap-3 items-center md:text-base text-xs justify-center md:hover:text-lg hover:text-blue-600 cursor-pointer">
+                            <p>View All</p>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="bg-indigo-500" style="width: 50%; height: 3px;"></div>
+                    <div class="border border-gray-400 mt-0 "></div>
+                </div>
+                <!-- contents -->
+                 <div class="md:grid grid-cols-5 gap-5 md:px-10 px-8">
+                    <!-- 1 -->
+                    <div class="bg-white rounded rounded-xl shadow-lg border-cyan-100 border-2 hover:border-solid hover:border-indigo-500 cursor-pointer">
+                        <div class="bg-[url(./media/s25Ultra.png)] bg-cover bg-center rounded-t-xl" style="height: 250px;"></div>
+                        <div class="px-10 py-5">
+                            <h5>Galaxy S25 Ultra</h5>
+                            <h6><b>&#8377; 100,000</b> &emsp; <del>&#8377; 120,000</del></h6>
+                            <div class="border border-gray-400 my-4"></div>
+                            <h6 class="text-green-600">Save - &#8377; 20,000</h6>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="bg-white rounded rounded-xl md:mt-0 mt-5 shadow-lg border-cyan-100 border-2 hover:border-indigo-500 cursor-pointer">
+                        <div class="bg-[url(./media/Xiaomi_15_pro.png)] bg-cover bg-center rounded-t-xl" style="height: 250px;"></div>
+                        <div class="px-10 py-5">
+                            <h5>Xiaomi 15 pro</h5>
+                            <h6><b>&#8377; 55,000</b> &emsp; <del>&#8377; 65,000</del></h6>
+                            <div class="border border-gray-400 my-4"></div>
+                            <h6 class="text-green-600">Save - &#8377; 10,000</h6>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="bg-white rounded rounded-xl md:mt-0 mt-5 shadow-lg border-cyan-100 border-2 hover:border-indigo-500 cursor-pointer">
+                        <div class="bg-[url(./media/iphone.png)] bg-cover bg-center rounded-t-xl" style="height: 250px;"></div>
+                        <div class="px-10 py-5">
+                            <h5>Iphone 15 Pro Max 512GB</h5>
+                            <h6><b>&#8377; 135,000</b> &emsp; <del>&#8377; 150,000</del></h6>
+                            <div class="border border-gray-400 my-4"></div>
+                            <h6 class="text-green-600">Save - &#8377; 15,000</h6>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="bg-white rounded rounded-xl md:mt-0 mt-5 shadow-lg border-cyan-100 border-2 hover:border-indigo-500 cursor-pointer">
+                        <div class="bg-[url(./media/Iqoo_neo9Pro.png)] bg-cover bg-center rounded-t-xl" style="height: 250px;"></div>
+                        <div class="px-10 py-5">
+                            <h5>IQOO Neo 9 Pro</h5>
+                            <h6><b>&#8377; 31,000</b> &emsp; <del>&#8377; 35,000</del></h6>
+                            <div class="border border-gray-400 my-4"></div>
+                            <h6 class="text-green-600">Save - &#8377; 4000</h6>
+                        </div>
+                    </div>
+                    <!-- 5 -->
+                    <div class="bg-white rounded rounded-xl md:mt-0 mt-5 shadow-lg border-cyan-100 border-2 hover:border-indigo-500 cursor-pointer">
+                        <div class="bg-[url(./media/redmi.png)] bg-cover bg-center rounded-t-xl" style="height: 250px;"></div>
+                        <div class="px-10 py-5">
+                            <h5>Redmi Note 14 Pro+ 5G</h5>
+                            <h6><b>&#8377; 27,500</b> &emsp; <del>&#8377; 30,000</del></h6>
+                            <div class="border border-gray-400 my-4"></div>
+                            <h6 class="text-green-600">Save - &#8377; 2500</h6>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <!-- Shop from Top Categories -->
+            <div>
+                <div class="px-10 md:mt-5 mt-10">
+                    <div class="flex items-center justify-between">
+                        <h1 class="font-bold md:text-3xl text-xl md:pt-5  pb-3">Shop from <span class="text-indigo-500">Top Categories</span></h1>
+                        <div class="flex gap-3 items-center md:text-base text-xs justify-center md:hover:text-lg hover:text-blue-600 cursor-pointer">
+                            <p>View All</p>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="bg-indigo-500" style="width: 35%; height: 3px;"></div>
+                    <div class="border border-gray-400 mt-0 "></div>
+                </div>
+    
+                <div class="flex flex-wrap justify-between md:px-10 px-5 mt-10 gap-y-5">
+
+                    <!-- item-1 -->
+                    <div>
+                        <div class="bg-blue-400 w-41 h-41 rounded-full border border-3 border-purple-500 shadow-xl flex items-center justify-center">
+                            <div class="rounded-full bg-[url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3y90-m03aScGbr6dac-LZVS2haOwWwX9mmw&s)] bg-center w-40 h-40 hover:translate-x-1 hover:-translate-y-1 cursor-pointer"></div>
+                        </div>
+                        <h5 class="text-center font-bold text-lime-600">Watches</h5>
+                    </div>
+                    <!-- item-2 -->
+                    <div>
+                        <div class="bg-blue-400 w-41 h-41 rounded-full border border-3 border-purple-500 shadow-xl flex items-center justify-center">
+                            <div class="rounded-full border-purple-500 bg-[url(https://www.shutterstock.com/image-photo/concept-motherboard-picture-brain-technology-260nw-2422220481.jpg)] bg-center w-40 h-40 hover:translate-x-1 hover:-translate-y-1 cursor-pointer"></div>
+                        </div>
+                        <h5 class="text-center font-bold text-lime-600">Electronics</h5>
+                    </div>
+                    <!-- item-3 -->
+                    <div>
+                        <div class="bg-blue-400 w-41 h-41 rounded-full border border-3 border-purple-500 shadow-xl flex items-center justify-center">
+                            <div class="rounded-full border-purple-500 bg-[url(https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGxhbnRpbmd8ZW58MHx8MHx8fDA%3D)] bg-center bg-cover w-40 h-40 hover:translate-x-1 hover:-translate-y-1 cursor-pointer"></div>
+                        </div>
+                        <h5 class="text-center font-bold text-lime-600">Gardening Items</h5>
+                    </div>
+                    <!-- item-4 -->
+                    <div>
+                        <div class="bg-blue-400 w-41 h-41 rounded-full border border-3 border-purple-500 shadow-xl flex items-center justify-center">
+                            <div class="rounded-full bg-[url(https://images-cdn.ubuy.co.in/635d30037f497c0d48644633-luxspire-powder-makeup-brush-flat.jpg)] bg-center bg-cover w-40 h-40 hover:translate-x-1 hover:-translate-y-1 cursor-pointer"></div>
+                        </div>
+                        <h5 class="text-center font-bold text-lime-600">Cosmetics</h5>
+                    </div>
+                    <!-- item-5 -->
+                    <div>
+                        <div class="bg-blue-400 w-41 h-41 rounded-full border border-3 border-purple-500 shadow-xl flex items-center justify-center">
+                            <div class="rounded-full bg-[url(https://thumbs.dreamstime.com/b/old-book-flying-letters-magic-light-background-bookshelf-library-ancient-books-as-symbol-knowledge-history-218640948.jpg)] bg-center bg-cover w-40 h-40 hover:translate-x-1 hover:-translate-y-1 cursor-pointer"></div>
+                        </div>
+                        <h5 class="text-center font-bold text-lime-600">Books</h5>
+                    </div>
+                    <!-- item-6 -->
+                    <div>
+                        <div class="bg-blue-400 w-41 h-41 rounded-full border border-3 border-purple-500 shadow-xl flex items-center justify-center">
+                            <div class="rounded-full bg-[url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnwywPoWWhIiYXWzzRIeK5z5Bxnyw8nZ0fSQ&s)] bg-left-top bg-cover w-40 h-40 hover:translate-x-1 hover:-translate-y-1 cursor-pointer"></div>
+                        </div>
+                        <h5 class="text-center font-bold text-lime-600">Camera</h5>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <!-- About Us -->
+        <div class="w-full bg-slate-500" id="aboutSS">
+            <div class="w-full flex items-center justify-center">
+                <div class="md:grid grid-cols-2 gap-1 md:p-20 p-5">
+                    <!-- img container -->
+                    <div class="bg-orange-700 md:pl-1 md:mx-0 ml-3" style="height: 325px; width: 90%;">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/049/858/756/small/this-futuristic-online-shopping-concept-features-a-digital-cart-integrated-with-advanced-technology-elements-photo.jpg" alt="no-image" style="margin-left: 4%; width: 108%; height: 300px;">
+                    </div>
+                    <!-- text container -->
+                    <div>
+                        <div class="text-white">
+                            <h1 class="md:text-3xl mt-4 text-center">Know About Us</h1>
+                            <p class="p-5 md:text-xl text-sm text-center">Welcome to MegaMart. Our mission is to provide high-quality products at affordable prices while ensuring a seamless shopping experience.
+                            <br><br>
+                            At MegaMart, we prioritize customer satisfaction, offering secure payments, fast delivery, and top-notch customer support. Whether you're searching for the latest trends, everyday essentials, or exclusive deals, our store offers a diverse selection of products to meet all your needs.
+                            <br><br>
+                            Shop with confidence and experience hassle-free online shopping with us. Thank you for choosing MegaMart—where quality meets convenience!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- our features -->
+        <div class="w-full bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
+            <!-- heading -->
+            <h1 class="text-center font-bold text-4xl pt-10 text-white">Our Features</h1>
+            <!-- contents -->
+            <div class="grid md:grid-cols-4  p-10 gap-1">
+                <!-- feature-1 -->
+                <div class="bg-white py-10 rounded">
+                    <img src="./media/free_truck.png" alt="no image" class="h-24 mx-auto mt-3">
+                    <h5 class="font-bold text-red-500 text-2xl text-center">Free Delivery</h5>
+                    <p class="text-center p-5 text-sm">At MegaMart, we believe shopping should be hassle-free! Enjoy free delivery on all your orders, ensuring a seamless and cost-effective shopping experience. No hidden charges—just fast, reliable, and zero-cost shipping straight to your doorstep.
+                    <br><br>
+                    Shop now and experience the convenience of free delivery! 🚚✨
+                    </p>
+                </div>
+                <!-- feature-2 -->
+                <div class="bg-white py-10 rounded">
+                    <img src="./media/cash-back.png" alt="no image" class="h-24 mx-auto mt-3">
+                    <h5 class="font-bold text-red-500 text-2xl text-center">100% Cash Back</h5>
+                    <p class="text-center p-5 text-sm"><br>At MegaMart, we value your trust! Enjoy 100% cash back on eligible purchases, ensuring a worry-free shopping experience. No risks—just fast, secure, and full refunds credited back to you.
+                    <br><br>
+                    Shop now and experience the ease of 100% cash back!💰✨
+                    </p>
+                </div>
+                <!-- feature-3 -->
+                <div class="bg-white py-10 rounded">
+                    <img src="./media/quality-aasurance.png" alt="no image" class="h-24 mx-auto mt-3">
+                    <h5 class="font-bold text-red-500 text-2xl text-center">Quality Asurance</h5>
+                    <p class="text-center p-5 text-sm"><br>At MegaMart, we prioritize excellence! Enjoy quality assurance on all products, ensuring a reliable and satisfying shopping experience. No compromises—just top-tier, carefully tested items for you.
+                    <br><br>
+                    Shop now and experience the trust of quality assurance! ✅✨
+                </p>
+                </div>
+                <!-- feature-4 -->
+                <div class="bg-white py-10 rounded">
+                    <img src="./media/24-7.png" alt="no image" class="h-24 mx-auto mt-3">
+                    <h5 class="font-bold text-red-500 text-2xl text-center">24/7 Support</h5>
+                    <p class="text-center p-5 text-sm"><br>At MegaMart, customer satisfaction comes first! Enjoy 24/7 support for all your queries, ensuring a smooth and hassle-free shopping experience. No delays—just prompt, friendly assistance anytime you need.
+                    <br><br>
+                    Shop with confidence and rely on our 24/7 support! 📞✨
+                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer Sections -->
+    <footer>
+        <!-- content section -->
+        <div class="w-full bg-conic-180 from-indigo-600 via-indigo-50 to-indigo-600">
+            <div class="grid md:grid-cols-4 grid-cols-2 md:p-10 px-3 py-10 md:gap-10 gap-1">
+                <!-- col-1 -->
+                <div class=" px-4 py-7">
+                    <h1 class="md:text-3xl text-xl font-bold">MegaMart</h1>
+                    <form class="flex md:flex-row flex-col gap-0 mt-4">
+                        <input type="email" class="bg-black text-white rounded-lg md:rounded-l-lg md:rounded-r-none flex-1 px-3 py-2 outline-hidden" placeholder="Enter your email">
+                        <button type="submit" class=" bg-green-500 px-3 py-2 rounded-lg md:rounded-r-lg md:rounded-l-none text-white cursor-pointer md:mt-0 mt-1">Sign Up</button>
+                    </form>
+                    <p class="px-3 sm:text-sm mt-4"><b>contact Info:</b><br>
+                        42, Skyline Tower, Cyber Avenue
+                        Tech Park District, Neo City<br>
+                        Pin Code: 000000, <br>
+                        Country: Florentina
+                    </p>
+                </div>
+                <!-- col-2 -->
+                <div class=" px-4 py-7">
+                    <h1 class="md:text-2xl text-xl font-bold">Customer Care</h1>
+                    <ul>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">My Account</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Returns</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Discounts</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Order History</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Order Tracking</a></li>
+                    </ul>
+                    <h1 class="md:text-2xl text-xl font-bold mt-4">Pages</h1>
+                    <ul>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Blog</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Category</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Browse the shop</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Order History</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Order Tracking</a></li>
+                    </ul>
+                </div>   
+                <!-- col-3 -->
+                <div class=" px-4 py-7">
+                    <h1 class="md:text-2xl text-xl font-bold">Consumer Policy</h1>
+                    <ul>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Cancellation</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Terms of use</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Security</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Privacy</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Site Map</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Grievance Redressal</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">EPR Compliance</a></li>
+                    </ul>
+                </div>
+                <!-- col-4 -->
+                <div class=" px-4 py-7">
+                    <h1 class="md:text-2xl text-xl font-bold">About</h1>
+                    <ul>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Contact Us</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">About Us</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Careers</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">MegaMart Stories</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Press</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Corporite Informations</a></li>
+                        <li><a href="#" class="md:text-base text-sm hover:underline">Legal Services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- copy-right section -->
+        <div class="w-full bg-stone-800 flex px-10 py-3 items-center justify-around ">
+            <p class="text-white">&copy;MegaMart All Rights Reserved</p>
+            <!-- social media links -->
+            <div class="text-white flex gap-3">
+                <div class="w-8 h-8 rounded-full flex items-center justify-center bg-blue-700 cursor-pointer hover:text-green-200 hover:scale-110"><i class="fa-brands fa-facebook-f"></i></div>
+                <div class="w-8 h-8 rounded-full flex items-center justify-center bg-blue-700 cursor-pointer hover:text-green-200 hover:scale-110"><i class="fa-brands fa-x-twitter"></i></div>
+                <div class="w-8 h-8 rounded-full flex items-center justify-center bg-blue-700 cursor-pointer hover:text-green-200 hover:scale-110"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
